@@ -3,12 +3,12 @@ syntax on           " syntax highlighing
 
 
 " Set 7 lines to the curors - when moving vertical..
-set so=7
+set so=30
 
 
 set nostartofline   " don't jump to first character when paging
 set title           " show title in console title bar
-set ruler	    "Always show current position
+set ruler	        "Always show current position
 set cmdheight=2     "The commandbar height
 set hlsearch        "Highlight search things
 
@@ -45,5 +45,13 @@ set autoread
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree Configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+"toggle NerdTree show/hidden with <CTRL+n>
 nmap <silent> <c-n> :NERDTreeToggle<CR>
+
+"load NERDTree when vim starts
+autocmd VimEnter * NERDTree
+
+" Show hidden files in NERDTree
+let NERDTreeShowHidden=1
+
+NERDChristmasTree=1
