@@ -19,6 +19,7 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 set smarttab
+set list listchars=tab:\ \ ,trail:·
 
 set lbr
 set tw=500
@@ -55,3 +56,15 @@ autocmd VimEnter * NERDTree
 let NERDTreeShowHidden=1
 
 NERDChristmasTree=1
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Conque Shell Config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <c-t> :ConqueTerm bash --login<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Set Default Colorscheme
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme solarized
