@@ -1,23 +1,21 @@
 set number          " show line numbers
 syntax on           " syntax highlighing
+set nocompatible	"turns of vi compatiblity mode
 
 
-" Set 7 lines to the curors - when moving vertical..
-set so=30
+" Set 20 lines to the curors - when moving vertical..
+set so=20
 
 
 set nostartofline   " don't jump to first character when paging
 set title           " show title in console title bar
 set ruler	        "Always show current position
 set cmdheight=2     "The commandbar height
-set hlsearch        "Highlight search things
-
+set nohls        "Highlight search things
+set incsearch	"smarter search
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set expandtab
-set shiftwidth=4
-set tabstop=4
 set smarttab
 set list listchars=tab:\ \ ,trail:·
 
@@ -77,7 +75,35 @@ filetype on
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Keep .SWP files in temp directory
+" => Key Mappings to switch tabs (apple key + NUM)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ map <D-1> :tabn 1<CR>
+ map <D-2> :tabn 2<CR>
+ map <D-3> :tabn 3<CR>
+ map <D-4> :tabn 4<CR>
+ map <D-5> :tabn 5<CR>
+ map <D-6> :tabn 6<CR>
+ map <D-7> :tabn 7<CR>
+ map <D-8> :tabn 8<CR>
+ map <D-9> :tabn 9<CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Key Mappings to switch tabs (apple key + NUM) when in
+"    while in INSERT mode
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ map! <D-1> <C-O>:tabn 1<CR>
+ map! <D-2> <C-O>:tabn 2<CR>
+ map! <D-3> <C-O>:tabn 3<CR>
+ map! <D-4> <C-O>:tabn 4<CR>
+ map! <D-5> <C-O>:tabn 5<CR>
+ map! <D-6> <C-O>:tabn 6<CR>
+ map! <D-7> <C-O>:tabn 7<CR>
+ map! <D-8> <C-O>:tabn 8<CR>
+ map! <D-9> <C-O>:tabn 9<CR>
 
-set dir=~/tmp	
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Map ctrl-movement keys to window switching
+map <C-k> <C-w><Up>
+map <C-j> <C-w><Down>
+map <C-l> <C-w><Right>
+map <C-h> <C-w><Left>
+  
