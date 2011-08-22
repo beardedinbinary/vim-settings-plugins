@@ -53,7 +53,7 @@ autocmd VimEnter * NERDTree
 " Show hidden files in NERDTree
 let NERDTreeShowHidden=1
 
-NERDChristmasTree=1
+let NERDChristmasTree=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -102,8 +102,23 @@ filetype on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map ctrl-movement keys to window switching
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-k> <C-w><Up>
 map <C-j> <C-w><Down>
 map <C-l> <C-w><Right>
 map <C-h> <C-w><Left>
-  
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Smart Search
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set ignorecase 
+set smartcase
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Scroll The View Port Faster
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Setting Visual Bell, In Place of Annoying Audio Bell
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set visualbell
